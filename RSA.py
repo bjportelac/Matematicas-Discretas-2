@@ -2,9 +2,9 @@
 print("Ingrese el codigo a enviar:")
 m=int(input())
 
-print("Ingrese el entero P:")
+print("Ingrese el numero primo P:")
 p=int(input())
-print("Ingrese el entero Q (diferente a P):")
+print("Ingrese el numero primo Q (diferente a P):")
 q=int(input())
 
 #primero estimamos el algoritmo de euclides para obtener el MCD 
@@ -27,11 +27,6 @@ def generate_keys(phi):
   	gcd, discard, d = egcd(phi, e)
   	if gcd == 1:
   		return e, d
-def privkey(phi,e):
-  print(e)
-  for d in range(n):
-  	if (d*e)%phi == 1:
-  		return d
 
 #Haciendo uso del algorimo de RSA encriptamos el mensaje.
 def encrypt(m,d,n):
